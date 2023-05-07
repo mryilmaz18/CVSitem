@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="CVSite.Admin" %>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>WEB Blog Admin 2023</title>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="admindosyalar/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Our Custom CSS -->
+    <link href="admindosyalar/sidebar/style2.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div>
+        <class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3> ÖMER YILMAZ </h3>
+                <strong>Admin Paneli</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="hakkımda.aspx">
+                     <i class="glyphicon glyphicon-home"></i>
+                        Hakkımda
+                    </a> 
+                </li>
+                <li>
+                    <a href="AdminDeneyimler.aspx">
+                        <i class="glyphicon glyphicon-briefcase"></i>
+                       Deneyimlerim
+                    </a>
+                    </li>
+                <li>
+                    <a href="AdminEgitimler.aspx">
+                        <i class="glyphicon glyphicon-education"></i>
+                        Eğitim Hayatım
+                    </a>
+
+                </li>
+                <li>
+                    <a href="AdminYetenekler.aspx">
+                        <i class="glyphicon glyphicon-music"></i>
+                        Yeteneklerim
+                    </a>
+                </li>
+                <li>
+                    <a href="AdminHobiler.aspx">
+                        <i class="glyphicon glyphicon-play"></i>
+                        Hobilerim
+                    </a>
+                </li>
+                <li>
+                    <a href="AdminSertifikalar.aspx">
+                        <i class="glyphicon glyphicon-book"></i>
+                        Sertifikalarım
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+        <!-- Page Content  -->
+        <div id="content">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                //değişecek alan
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="admindosyalar/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="admindosyalar/js-bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
+            });
+        </script>
+</body>
+
+</html>
